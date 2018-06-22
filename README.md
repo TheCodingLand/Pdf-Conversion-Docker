@@ -1,7 +1,7 @@
 # Pdf-Conversion-Docker
 This is a minimal first version of a tool meant to solve problems with image compression using a local thresholding algorithm.
 
-The goal is to produce 200DPI Black and white only, CCITT FAX compressed, A4 documents, no matter the input resolution.
+The goal is to produce 200DPI Black and white only, CCITT FAX compressed, A4 documents, no matter the input resolution, and with a very low size by removing large areas of the same color / content, while keeping features using computed local adaptative threshold.
 
 This is very much a draft, and the code is really horrible for now, but as it was requested I have decided to release it.
 
