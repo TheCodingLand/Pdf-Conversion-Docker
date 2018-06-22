@@ -17,7 +17,9 @@ Mount it with a RW permission.
 
 example : 
 mkdir /media/docs
+
 and in /etc/fstab
+
 //fileserver/docs /media/docs cifs rw,username=user,password=password,guest,uid=root,iocharset=utf8,file_mode=0666,dir_mode=0666,noperm 0 0
 
 to run : 
