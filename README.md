@@ -1,5 +1,5 @@
 # Pdf-Conversion-Docker
-This is a minimal first version of a tool meant to solve problems with image compression using local thresholding algorythms.
+This is a minimal first version of a tool meant to solve problems with image compression using a local thresholding algorithm.
 
 The goal is to produce 200DPI Black and white only, CCITT FAX compressed, A4 documents, no matter the input resolution.
 
@@ -13,9 +13,11 @@ Just place it in the same folder as the dockerfile and remove the wget command.
 "http://www.fmwconcepts.com/imagemagick/downloadcounter.php?scriptname=localthresh&dirname=localthresh"
 
 On the docker host, mount a network share where PDF files are stored to be converted.
+
 Mount it with a RW permission.
 
 example : 
+
 mkdir /media/docs
 
 and in /etc/fstab
