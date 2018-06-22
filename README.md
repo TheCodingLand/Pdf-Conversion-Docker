@@ -9,7 +9,7 @@ Once converted, they will be moved to a "converted" subfolder.
 Please be aware that this Dockerfile downloads a shell script for imagemagick from fred's webpage and sets its rights to execute when building the container.
 
 Maybe you will like to download it and store it for security reasons.
-Just place it in the same folder as the dockerfile and remove the wget command.
+Just place it in the same folder as the dockerfile, chmod +x and remove the wget command.
 
 "http://www.fmwconcepts.com/imagemagick/downloadcounter.php?scriptname=localthresh&dirname=localthresh"
 
