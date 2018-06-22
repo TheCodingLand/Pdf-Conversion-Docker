@@ -6,6 +6,8 @@ This is very much a draft, and the code is really horrible for now, but as it wa
 The script monitors your configured shared folder and automatically converts them.
 Once converted, they will be moved to a "converted" subfolder.
 
+I also converts 1 page .jpg files.
+
 Please be aware that this Dockerfile downloads a shell script for imagemagick from fred's webpage and sets its rights to execute when building the container.
 
 Maybe you will like to download it and store it for security reasons.
