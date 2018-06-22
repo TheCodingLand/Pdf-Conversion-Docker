@@ -28,7 +28,8 @@ clone this repo,
 
 docker build . -t pdfconvert
 
-docker run pdfconvert -e "PDFPATHORIGIN=/media/docs" -v "/media/docs:/media/docs"
+docker run -e "PDFPATHORIGIN=/media/docs" -v "/media/docs:/media/docs" pdfconvert
+
 
 Be careful, each files are deleted and moved to a subfolder named "converted"
 
