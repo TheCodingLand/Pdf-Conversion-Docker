@@ -25,8 +25,10 @@ and in /etc/fstab
 to run : 
 
 clone this repo,
+
 docker build .
-docker up -e "PDFPATHORIGIN=/media/docs"
+
+docker up -e "PDFPATHORIGIN=/media/docs" -v "/media/docs:/media/docs"
 
 Be careful, each files are deleted and moved to a subfolder named "converted"
 
