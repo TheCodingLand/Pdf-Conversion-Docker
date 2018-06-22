@@ -26,5 +26,9 @@ docker build .
 docker up -e "PDFPATHORIGIN=/media/docs"
 
 Be careful, each files are deleted and moved to a subfolder named "converted"
+Currently it produces 3 different versions, with different settings for bias and radius.
 
+This is to accomodate differences in input quality.
+
+This is meant to become a web platform but I have no time currently to do it.
 
