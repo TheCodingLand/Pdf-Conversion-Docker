@@ -58,7 +58,7 @@ def convertImage(pdf, option):
     if not os.path.exists(f"{pdf.tempdir!s}converted/"):
         os.makedirs(f"{pdf.tempdir!s}converted/")
     for i in range(0,pdf.totalpages):
-        command = f"/usr/src/app/{option.algo!s} -b {option.bias!s} -r {option.radius!s} -m {option.method!s} -n yes {pdf.tempdir!s}border/image_{i:04}.jpg {pdf.tempdir!s}converted/image_{i:04}.gif"
+        command = f"{option.algo!s} -b {option.bias!s} -r {option.radius!s} -m {option.method!s} -n yes {pdf.tempdir!s}border/image_{i:04}.jpg {pdf.tempdir!s}converted/image_{i:04}.gif"
         logging.warning(command)
         call(command, shell=True)
 

@@ -32,7 +32,7 @@ WORKDIR /usr/src/app
 # add app
 ADD . /usr/src/app
 
-RUN wget http://www.fmwconcepts.com/imagemagick/downloadcounter.php?scriptname=localthresh&dirname=localthresh -O /usr/src/app/localthresh
-RUN chmod 777 /usr/src/app/localthresh 
+RUN wget "http://www.fmwconcepts.com/imagemagick/downloadcounter.php?scriptname=localthresh&dirname=localthresh" -O /usr/bin/localthresh
+RUN chmod 777 /usr/bin/localthresh 
 
 CMD python3 main.py
