@@ -3,7 +3,10 @@ import glob, os, random, shutil, time, re, fnmatch
 from subprocess import call
 import logging
 
-#TODO : Refactor script into a class, split classes into files, add path management for files in the class for intermediate image conversions (location of the latest conversion -> destination)
+#TODO Module : Refactor into a class, split classes into files, add path management for files in the class for intermediate image conversions (location of the latest conversion -> destination)
+#TODO React frontend : uploads, previews, websocket, downloads, notifications.
+#TODO SERVER : API, worker queue.
+
 
 
 
