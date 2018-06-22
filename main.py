@@ -1,7 +1,9 @@
 import math
-import glob, os, random, shutil, time
+import glob, os, random, shutil, time, re, fnmatch
 from subprocess import call
 import logging
+
+#TODO : Refactor script into a class, split classes into files, add path management for files in the class for intermediate image conversions (location of the latest conversion -> destination)
 
 
 
@@ -34,6 +36,19 @@ options = []
 options.append(Option(algo="localthresh",bias=5, radius=12, method=1))
 options.append(Option(algo="localthresh",bias=15, radius=5, method=1))
 options.append(Option(algo="localthresh",bias=3, radius=5, method=1))
+
+
+
+
+#TODO : replace glob.glob with this and rename files lowercase
+def findfiles(which, where='.'):
+    '''Returns list of filenames from `where` path matched by 'which'
+       shell pattern. Matching is case-insensitive.'''
+    
+    # TODO: recursive param with walk() filtering
+    rule = re.compile(fnmatch.translate(which), re.IGNORECASE)
+    return [name for name in os.listdir(where) if rule.match(name)]
+
 
 def copyImage(pdf):
     if not os.path.exists(f"{pdf.tempdir!s}images/"):
