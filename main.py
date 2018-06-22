@@ -93,7 +93,10 @@ def imageToPdf(pdf,option):
 def lookForFiles(folder):
     time.sleep(2)
     os.chdir(folder)
-    for file in glob.glob(f"*.pdf"):
+    pdffiles = glob.glob("*.pdf")
+    pdffiles.append(glob.glob("*.PDF"))
+
+    for file in pdffiles:
         #os.chdir(workingdir)
         
         
@@ -119,7 +122,11 @@ def lookForFiles(folder):
         except:
             logging.warning("could not delete temp dir, will be cleaned up with cronjob")
     os.chdir(folder)
-    for file in glob.glob(f"*.jpg"):
+    imagefiles = glob.glob("*.jpg")
+    imagefiles.append(glob.glob("*.JPG"))
+    imagefiles.append(glob.glob("*.jpeg"))
+    imagefiles.append(glob.glob("*.JPEG"))
+    for file in imagefiles:
         #os.chdir(workingdir)
         
         
